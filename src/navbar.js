@@ -2,8 +2,6 @@ import { Link } from "react-router-dom";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import { useHistory } from "react-router-dom";
 import  logo  from "./skyleap.png"
-import { useState } from "react";
-import { Dropdown } from "bootstrap";
 const Navbar = () => {
   var user = false;
   if(window.localStorage.user){

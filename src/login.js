@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import  logo  from "./skyleap.png"
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');

@@ -1,6 +1,5 @@
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 const MyPostsLists = (props) => {
     const posts = props.posts;
     console.log(posts);

@@ -1,7 +1,5 @@
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
 import { useState } from 'react';
 const ShowComments = (props) => {
     console.log(props.comment.post[0].user.name);
