@@ -9,7 +9,6 @@ const BlogList = (props) => {
             {posts.map((post) => (  
             <div className="d-inline-flex p-2 flex-row post-preview" key={post.id}>
                 <Link to={`/home/${post.id}`}>
-                {/* <div className="col-4"> */}
                    <div className="card mx-2 my-2" style={{width: "25rem"}}>
                    <div className="card-body">
                      <h5 className="card-title">{post.title}</h5>
@@ -17,7 +16,6 @@ const BlogList = (props) => {
                      <p className="card-text text-dark">{post.body}</p>
                      <a href="#" className="card-link">Comment</a>
                      <a href="#" className="card-link">Like</a>
-                {/* </div> */}
                    </div>
                  </div>
                 </Link>

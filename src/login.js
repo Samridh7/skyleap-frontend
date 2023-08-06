@@ -17,7 +17,6 @@ const Login = () => {
       username: username,
       password: password
     }).then((response) => {
-      // console.log(response);
       if (response.data.message) {
         setLoginStatus(response.data.message);
         setIsLogin(false);
@@ -62,7 +61,6 @@ const Login = () => {
               </div>
             </div>
           </div>
-          {/* {loginStatus && <p>{loginStatus}</p>}  */}
           {!islogin && !checked && <div class="alert alert-danger" role="alert">
             {loginStatus}
           </div>}

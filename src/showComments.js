@@ -4,7 +4,7 @@ import { useState } from 'react';
 const ShowComments = (props) => {
     console.log(props.comment.post[0].user.name);
     const comments = props.comment.comments;
-    const [deleteComment,setDeleteComment] = useState(false);
+    const [setDeleteComment] = useState(false);
 
     const handleDelete = (key) => {
        axios.delete(`https://skyleap-app-09b1b3263d88.herokuapp.com/comment/${key}`)
@@ -12,7 +12,6 @@ const ShowComments = (props) => {
            console.log("comment deleted");
            console.log(response);
            setDeleteComment(true);
-        //    <Redirect to=""></Redirect>
         window.location.reload(false);
        }).catch((e) => {
            console.log(e);

@@ -7,18 +7,11 @@ const Navbar = () => {
   if(window.localStorage.user){
         user = true;
   }
-  // console.log(user);
-  // const [name, setName] = useState("Guest");
-  // if(window.localStorage.length == 0){
-  //       setName("guest");
-  // }
-  // else{
-  //       setName(JSON.parse(window.localStorage.user))
-  // }
+
   const history = useHistory();
   const signOut = () => { 
        window.localStorage.clear();
-      //  setName("Guest");
+
        history.push("/");
   }
     return ( 

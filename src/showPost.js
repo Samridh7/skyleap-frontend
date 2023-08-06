@@ -5,11 +5,7 @@ import ShowComments from "./showComments";
 const PostDetail = (props) => {
     console.log(props.posts);
     const posts = props.posts.post;
-    // const [comments, setComments] = useState(null);
     const comments = props.posts;
-    // setComments(props.posts.comments);
-    // console.log(comments);
-    // const [commentAdded,setCommentAdded] = useState(false);
     const [comment, setComment] = useState('');
     console.log(posts);
     console.log(posts[0].id);
@@ -25,7 +21,7 @@ const PostDetail = (props) => {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        // setCommentAdded(false);
+
         axios.post('https://skyleap-app-09b1b3263d88.herokuapp.com/comment', {
            userId: JSON.parse(window.localStorage.user).id,
            postId: posts[0].id,
@@ -35,8 +31,7 @@ const PostDetail = (props) => {
             console.log("new comment added");
             setComment('');
             window.location.reload(false);
-            // history.push(`/home/${posts[0].id}`)
-            // setCommentAdded(true);
+
         }).catch((e) => {
             console.log(e);
         })
@@ -50,7 +45,7 @@ const PostDetail = (props) => {
                 <div className="my-4">
                     {post.body}
                 </div>
-                {/* <hr className="line w-75 my-4" /> */}
+
                 <div className="comments py-2">
                     {JSON.parse(window.localStorage.user).name === post.user.name?
                     <div className="container">
@@ -61,7 +56,7 @@ const PostDetail = (props) => {
                     <a href=""><i className="bi bi-chat-left-dots-fill"></i> comment </a>
                     }
                 </div>
-                {/* <hr className="line w-75 my-4" /> */}
+
                 <form className="comment-section my-4" onSubmit={handleSubmit}>
                 <label htmlFor="comment" className="col-sm-2 col-form-label">{JSON.parse(window.localStorage.user).name} :</label>
                     <input className="comment-tag px-2 py-1 w-75" type="text" required value={comment} onChange = {(e) => {setComment(e.target.value)}} placeholder="Write a comment...." />

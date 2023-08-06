@@ -18,13 +18,6 @@ const PostDetails = () => {
     }, [])
     return ( 
         <div id='content' className="postDetails">
-            {/* {post && (
-                <article>
-                    <h2>{post.title}</h2>
-                    <p>{post.body}</p>
-                    <div>{post.user.name}</div>
-                </article>
-            )} */}
             {post && <PostDetail posts={post}></PostDetail>}
         </div>
      );
