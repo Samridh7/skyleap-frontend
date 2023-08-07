@@ -7,6 +7,17 @@
   background-color: lightblue
 }
 
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 150px; /* Adjust the gap size as needed */
+}
+
+.social-icons a {
+  color: #007bff; /* Adjust the icon color as needed */
+  transition: color 0.3s ease;
+}
+
 #navbar {
   position: sticky;
   top: 0px;
