@@ -1,29 +1,34 @@
+import React from 'react';
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+
 const Footer = () => {
-    return ( 
-<footer id="footer" className="page-footer font-small teal pt-4">
-  <div className="container-fluid text-center text-md-left">
-    <div className="row">
-      <div className="col-md-6 mt-md-0 mt-3">
-        <h5 className="text-uppercase font-weight-bold">Footer text 1</h5>
-       
+  return (
+    <footer id="footer" className="page-footer font-small teal pt-4">
+      <div className="container-fluid text-center text-md-left">
+        <div className="social-icons">
+          {/* Replace the 'your-social-media-links' with your actual social media profile URLs */}
+          <a href="your-facebook-url" target="_blank" rel="noopener noreferrer">
+            <FaFacebookF size={28} />
+          </a>
+          <a href="your-twitter-url" target="_blank" rel="noopener noreferrer">
+            <FaTwitter size={28} />
+          </a>
+          <a href="your-instagram-url" target="_blank" rel="noopener noreferrer">
+            <FaInstagram size={28} />
+          </a>
+          <a href="your-linkedin-url" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin size={28} />
+          </a>
+        </div>
       </div>
-
-      <hr className="clearfix w-100 d-md-none pb-3" />
-      <div className="col-md-6 mb-md-0 mb-3">
-
-        <h5 className="text-uppercase font-weight-bold">Footer text 2</h5>
-    
-
+      <div className="footer-text text-center py-3">
+        © {new Date().getFullYear()} Skyleap | All rights reserved.
+        <br />
+        {/* Replace 'www.skyleap.com' with your app's actual website URL */}
+        <a href="https://skyleap-app.netlify.app/">www.skyleap.com</a>
       </div>
-    </div>
-  </div>
-  <div className="footer-copyright text-center py-3">© 2022 Copyright:
-    <a> www.skyleap.com</a>
-  </div>
- 
+    </footer>
+  );
+};
 
-</footer>
-     );
-}
- 
 export default Footer;
