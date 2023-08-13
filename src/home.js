@@ -5,7 +5,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 const Home = () => {
     const [posts,setPosts] = useState(null)
     useEffect(() => {
-        axios.get('https://skyleap-app-09b1b3263d88.herokuapp.com').then((response) => {
+        axios.get('https://drab-jay-getup.cyclic.app').then((response) => {
             console.log(response.data);
             setPosts(response.data);
         }).catch((e) => {
