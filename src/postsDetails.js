@@ -8,7 +8,7 @@ const PostDetails = () => {
     const {id} = useParams();
     const [post,setPost] = useState(null)
     useEffect(() => {
-        axios.get('https://skyleap-app-09b1b3263d88.herokuapp.com/' + id).then((response) => {
+        axios.get('https://drab-jay-getup.cyclic.app/' + id).then((response) => {
             console.log(response.data);
             setPost(response.data);
             console.log(post);
