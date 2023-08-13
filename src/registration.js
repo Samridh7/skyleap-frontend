@@ -13,7 +13,7 @@ const Registration = () => {
         console.log(data);
         setIsPending(true);
 
-       axios.post('https://skyleap-app-09b1b3263d88.herokuapp.com/register', {
+       axios.post('https://drab-jay-getup.cyclic.app/register', {
            username: username,
            password: password
        }).then(() => {
