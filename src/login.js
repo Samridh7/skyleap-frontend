@@ -13,7 +13,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios.post("https://skyleap-app-09b1b3263d88.herokuapp.com/login", {
+    axios.post("https://drab-jay-getup.cyclic.app/login", {
       username: username,
       password: password
     }).then((response) => {
