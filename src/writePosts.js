@@ -11,7 +11,7 @@ const WritePost = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setIsPending(true);
-        axios.post('https://skyleap-app-09b1b3263d88.herokuapp.com/', {
+        axios.post('https://drab-jay-getup.cyclic.app/', {
            userId: JSON.parse(window.localStorage.user).id,
            title: postTitle,
            body: postBody
