@@ -7,7 +7,7 @@ const ShowComments = (props) => {
     const [setDeleteComment] = useState(false);
 
     const handleDelete = (key) => {
-       axios.delete(`https://skyleap-app-09b1b3263d88.herokuapp.com/comment/${key}`)
+       axios.delete(`https://drab-jay-getup.cyclic.app/comment/${key}`)
        .then((response) => {
            console.log("comment deleted");
            console.log(response);
