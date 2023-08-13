@@ -12,7 +12,7 @@ const PostDetail = (props) => {
     console.log(JSON.parse(window.localStorage.user).name);
     const history = useHistory();
     const handleDelete = () => {
-        axios.delete(`https://skyleap-app-09b1b3263d88.herokuapp.com/${posts[0].id}`).then((response) => {
+        axios.delete(`https://drab-jay-getup.cyclic.app/${posts[0].id}`).then((response) => {
               console.log(response);
               history.push("/home")
         }).catch((e) => {
@@ -22,7 +22,7 @@ const PostDetail = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        axios.post('https://skyleap-app-09b1b3263d88.herokuapp.com/comment', {
+        axios.post('https://drab-jay-getup.cyclic.app/comment', {
            userId: JSON.parse(window.localStorage.user).id,
            postId: posts[0].id,
            title: JSON.parse(window.localStorage.user).name,
