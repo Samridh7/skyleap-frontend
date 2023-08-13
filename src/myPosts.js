@@ -6,7 +6,7 @@ const MyPosts = () => {
     const [posts,setPosts] = useState([])
     const userId = JSON.parse(localStorage.user).id;
     useEffect(() => {
-        axios.get(`https://skyleap-app-09b1b3263d88.herokuapp.com/?userId=${userId}`).then((response) => {
+        axios.get(`https://drab-jay-getup.cyclic.app/?userId=${userId}`).then((response) => {
             // console.log(response.data);
             setPosts(response.data);
         }).catch((e) => {
