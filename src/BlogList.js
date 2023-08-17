@@ -15,7 +15,6 @@ const BlogList = (props) => {
                      <h6 className="card-subtitle mb-2 text-muted">{post.user.name}</h6>
                      <p className="card-text text-dark">{post.body}</p>
                      <a href="#" className="card-link">Comment</a>
-                     <a href="#" className="card-link">Like</a>
                    </div>
                  </div>
                 </Link>
